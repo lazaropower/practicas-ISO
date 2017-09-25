@@ -1,0 +1,13 @@
+#####################################
+##### EJERCICIOS BOLETIN 1 ISO ######
+#####################################
+########## 19/09/2017 ###############
+#####################################
+1) pwd 
+2) cd /etc, pwd 
+3) ls -l -d a*
+4) cd, find /usr/bin/ ../../usr/sbin -name ???? -maxdepth 1
+ls -l -d /usr/bin/???? ../../usr/sbin 
+5) mkdir configuracion, cp -a /etc/ configuracion/
+NOTA: "-a" ya incluye la opción "-r" así que no es necesario poner ambas, con la primera ya basta.
+
