@@ -10,4 +10,11 @@
 ls -l -d /usr/bin/???? ../../usr/sbin 
 5) mkdir configuracion, cp -a /etc/ configuracion/
 NOTA: "-a" ya incluye la opción "-r" así que no es necesario poner ambas, con la primera ya basta.
+6) cd configuracion/etc, find -type d
+7) find -type f -size -200k -exec rm -f {} \;
+8) find -maxdepth 1 -type f -printf 'Nombre: %p, tamaño: %s\n"
+9) mv ../../configuracion/ ../../copia_etc
+10) No se puede aplicar la orden "rm copia_etc" porque es un directorio. Hay que aplicar la orden:
+rm -rf copia_etc
+
 
