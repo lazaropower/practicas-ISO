@@ -1,0 +1,13 @@
+1. Desde tu directorio personal (por ejemplo: /home/alumno) sitúate en el directorio /tmp
+
+cd /tmp
+
+2. Crea un directorio dentro de /tmp llamado "copia" y asegúrate de que solo el usuario que has usado para crearlo (por ejemplo, el usuario alumno) puede tener acceso al mismo.
+
+mkdir copia
+chmod 700 copia/
+
+3. Desde el directorio /tmp, utiliza una única orden para buscar de forma recursiva a partir de tu directorio personal aquellos ficheros regulares que no tengan extensión txt o json y que tengan al menos permisos de lectura y escritura para usuarios del grupo, imprimiendo un listado en el que se muestre el nombre del fichero (con la ruta) y los permisos que tiene (en la forma rmw para usuario, grupo y resto) y copiando dichos ficheros al directorio copia que creaste en el ejercicio 
+
+find /home/alumno -type f ! -name "*.txt" ! -name "*.json" -perm -g=rw -printf "Nombre: %p, Permisos: %M\n" -exec cp {} copia/ \; 
+find /home/alumno -type f ! -name "*.txt" ! -name "*.json" -perm -060 -printf "Nombre: %p, Permisos: %M\n" -exec cp {} copia/ \; 
