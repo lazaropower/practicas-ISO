@@ -5,6 +5,20 @@
 #####################################
 
 +) grep
+1. grep "manzanas" compras/compras_nacionales   
+2. grep "manzanas" compras/*
+3. grep -l "naranjas" compras/*
+4. grep -i "peras" compras/compras*
+5. grep -i -h "peras" compras/compras*
+6. grep -h -n "1500 Kilogramos" compras/compras*
+7. grep -v "uvas" compras/compras_extracomunitarias
+8. grep -c "manzanas" compras/*
+9. grep "100* [Kk]ilogramos" compras/*
+10. grep .[0-9] compras/proveedores
+11. grep "[^1]000 [Kk]ilogramos" compras/*
+12. grep "^m" compras/compras_nacionales
+13. ls -l compras | grep 'les$'
+14. ls -l | grep ’d........x’
 
 +) sort
 
