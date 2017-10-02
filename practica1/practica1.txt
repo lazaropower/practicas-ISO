@@ -16,5 +16,12 @@ NOTA: "-a" ya incluye la opción "-r" así que no es necesario poner ambas, con 
 9) mv ../../configuracion/ ../../copia_etc
 10) No se puede aplicar la orden "rm copia_etc" porque es un directorio. Hay que aplicar la orden:
 rm -rf copia_etc
-
-
+11) find -maxdepth 1 -name "/.*" (REVISAR, CREO QUE ESTÁ MAL).
+12) find /usr -name '[A-Z][0-9]'
+13) find /usr -name '*.[!0-9]'
+14) find /usr /usr/bin /usr/sbin -type f -atime +7
+15) find -type f -newer .bash_history
+16) mkdir tmp/
+find /etc -type f -size +10k -size -20k -name "g*" -exec cp -r {} tmp/ \;
+17) find -type f ! -perm 000 -exec chmod 600 {} \;
+18) 
