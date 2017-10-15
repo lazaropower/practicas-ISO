@@ -21,6 +21,9 @@
 14. ls -l | grep ’d........x’
 
 +) sort
+1. sort -k1,1 -k3,3 -k5,5 empleados
+2. sort -k1,1 -n -k3,3 empleados
+3. sort -t: -k3,3 empleados
 
 +) tr
 
