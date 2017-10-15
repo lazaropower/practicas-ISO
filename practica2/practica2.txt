@@ -1,5 +1,5 @@
 #####################################
-##### EJERCICIOS BOLETIN 1 ISO ######
+##### EJERCICIOS BOLETIN 2 ISO ######
 #####################################
 ########## 26/09/2017 ###############
 #####################################
@@ -26,6 +26,12 @@
 3. sort -t: -k3,3 empleados
 
 +) tr
+1. cat empleadostabulados | tr -s " "
+2. cat empleadostabulados | tr -s " " "\t"
+3. cat empleadostabulados | tr "[a-z]" "[A-Z]" 
+   cat empleadostabulados | tr "[:lower:]" "[:upper:]"
+4. cat empleadostabulados | tr -c "[:blank:]" x
+5. echo Secreto a voces es un oxímoron | tr -s " " "\n"
 
 +) cut
 
