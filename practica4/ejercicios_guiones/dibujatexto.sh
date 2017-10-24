@@ -6,7 +6,7 @@
 while read linea 
 do 
 	i=1
-	car=r""
+	car=""
 	while [ ! -z "$car" ] # -z "$car" devuelve 0 si $car contiene ""
 	do
 		num=$(echo "$linea" | cut -c$i)
