@@ -6,8 +6,8 @@
 while read linea 
 do 
 	i=1
-	car=""
-	while [ ! -z "$car" ] # -z "$car" devuelve 0 si $car contiene ""
+	car=" " # Aqui inicializamos a cualquier caracter que no sea cadena vacia "" 
+	while [ ! -z "$car" ] # -z "$car" devuelve 0 si la longitud de $car es 0
 	do
 		num=$(echo "$linea" | cut -c$i)
 		let i+=1
