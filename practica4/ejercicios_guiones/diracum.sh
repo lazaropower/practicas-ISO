@@ -17,8 +17,12 @@ while read linea
 do
 	let ttotal+=$linea
 done < $fichero
+#########################################################################
+#         OTRA FORMA DE CALCULAR EL TAMAÑO TOTAL MUY RAPIDA             #
+#########################################################################
+ttot=$(find "$@" -maxdepth 1 -type f -printf "%s\n" | paste -s -d"+" | bc)
+#########################################################################
 
-# Codigo del programa
 # Nos es indifernete poner -k2n,2 o -k2n. Igual con $(($tacum+$tamano)) y let tacum=$tacum+$tamano
 tacum=0
 nfich=0
