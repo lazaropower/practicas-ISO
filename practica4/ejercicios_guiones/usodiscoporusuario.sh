@@ -8,11 +8,11 @@ do
 done
 
 errores=$(mktemp)
-usuarios=$(find "$@" -type f -printf "%u\n" 2> $errores | sort | uniq)
+usuarios=$(find "$@" -type f -printf "%u\n" 2>> $errores | sort | uniq)
 ttotal=0
 for usu in $usuarios
 do
-	tamficheros=$(find "$@" -type f -user "$usu" -printf "%s\n" 2> $errores /dev/null)
+	tamficheros=$(find "$@" -type f -user "$usu" -printf "%s\n" 2>> $errores)
 	tusuario=0
 	for tam in $tamficheros
 	do
@@ -34,4 +34,8 @@ else
 	let ttotal=\($ttotal/1024\)/1024
 	echo "Total de todos los usuarios: $ttotal MiB"
 fi
-#TODO mostrar directorios de los que no se ha podido contabilizar su contenido.
+if [ -s $errores ]
+then 
+	echo "El contenido de los siguiente directorios no se ha podido contabilizar:"
+	cat $errores | tr -s " " | cut -f 2 -d":"
+fi 
