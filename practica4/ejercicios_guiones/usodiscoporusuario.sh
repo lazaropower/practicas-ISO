@@ -8,11 +8,11 @@ do
 done
 
 errores=$(mktemp)
-usuarios=$(find "$@" -type f -printf "%u\n" 2>> $errores | sort | uniq)
+usuarios=$(find "$@" -type f -printf "%u\n" 2>$errores | sort | uniq)
 ttotal=0
 for usu in $usuarios
 do
-	tamficheros=$(find "$@" -type f -user "$usu" -printf "%s\n" 2>> $errores)
+	tamficheros=$(find "$@" -type f -user "$usu" -printf "%s\n" 2>/dev/null)
 	tusuario=0
 	for tam in $tamficheros
 	do
