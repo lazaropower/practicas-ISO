@@ -1,0 +1,22 @@
+#####################################
+##### EJERCICIOS BOLETIN 5 ISO ######
+#####################################
+########## 05/11/2017 ###############
+#####################################
+
+CREACIÓN DE USUARIOS
+
+1) $ sudo user add iso1. Si no establecemos una contraseña, no podemos ingresar con $ su iso1. La podemos cambiar con $ sudo passwd iso1.
+	1.1) Sí. /home/iso1
+	1.2) El 1001.
+	1.3) Sí, copia .bash/logout, .bash/profile y .bashrc
+	1.4) $ cat /etc/passwd | grep "iso1". $ sudo cat /etc/shadow | grep "iso1"
+
+2)
+	2.1) $ touch prueba.txt
+	2.2) $ su . $ chown root prueba.txt
+	2.3) $ ls -l. Sí se aplica el cambio. 
+
+3) $ vim /etc/motd. $ vim /etc/issue
+4) 
+	4.1) 
